@@ -14,6 +14,7 @@ export interface ICustomShimmerState{
 export default class CustomShimmer extends React.Component<ICustomShimmerProps, ICustomShimmerState> {
   public constructor(props:ICustomShimmerProps, state:ICustomShimmerState){
     super(props);
+    // Set the intial state with 5 dummy values for sites property
     this.state = {
       loaded: false,
       sites:[
@@ -27,6 +28,7 @@ export default class CustomShimmer extends React.Component<ICustomShimmerProps, 
   }
 
   public render(): React.ReactElement<ICustomShimmerProps> {
+    // Create the structure for each site element wrapped within a Shimmer component
     const elements = this.state.sites.map((val,index) => {
       return <div style={{padding:"10px", background:"white"}}>
       <Shimmer
@@ -57,6 +59,7 @@ export default class CustomShimmer extends React.Component<ICustomShimmerProps, 
     </div>);
   }
 
+  // This method provides the structure of the Shimmer with elements and groups
   private _getElementsForSiteListing= (): JSX.Element => {
     return (
       <div
@@ -80,6 +83,7 @@ export default class CustomShimmer extends React.Component<ICustomShimmerProps, 
     );
   }
 
+  // Query the search API to get the list of sites and set them in the state
   public componentDidMount()
   {
     // Sometime PnPjs is very fast, that we cannot see the shimmer.
