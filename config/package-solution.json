@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "using-react-shimmer-client-side-solution",
+    "id": "b21eebfb-969b-4a98-8d09-271fe7e2bde5",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/using-react-shimmer.sppkg"
+  }
+}
